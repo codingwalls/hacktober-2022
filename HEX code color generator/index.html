@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEX code color generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: none;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #container {
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 20px 30px rgba(75, 75, 75, 0.2);
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <input
+        type="text"
+        id="clr"
+        value="#FFFFFF"
+        style="text-transform: uppercase"
+      />
+    </div>
+
+    <div style="position: fixed; bottom: 50px; right: 50px">
+      <a href="../" class="fw-bold fs-3 text-decoration-none">← Home</a>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let clr = document.getElementById("clr");
+      clr.addEventListener("input", function () {
+        document.getElementById("container").style.background = clr.value;
+      });
+    </script>
+  </body>
+</html>
