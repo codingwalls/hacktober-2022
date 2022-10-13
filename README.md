@@ -15,4 +15,8 @@
   </a>&nbsp;
 </p>
 
-Contribute by making different different programs.
+## How to Contribute ?
+- Select a topic.
+- Make a folder with that name.
+- Complete the code within the folder.
+- Add the link in the main file.
