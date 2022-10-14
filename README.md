@@ -20,3 +20,4 @@
 - Make a folder with that name.
 - Complete the code within the folder.
 - Add the link in the main file.
+- Add the screenshot of the output you made.
