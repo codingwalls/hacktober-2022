@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: #eeeeee;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-area {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-area h1 {
+    margin-bottom: 2rem;
+    color: #ffffff;
+    background: #607d8b;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+.main-area h1 img {
+    height: 2rem;
+    vertical-align: bottom;
+    -webkit-user-drag: none;
+}
+
+.colors-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.each-palette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.7rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    position: relative;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+    -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.each-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.each-color .color {
+    width: 3rem;
+    height: 7rem;
+    background: #4caf50;
+    border-radius: 1.5rem;
+    -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.each-color .color:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.each-color code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    color: #575555;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+#color_input {
+    width: 0.5rem;
+    position: absolute;
+    left: -5rem;
+}
+
+.animated {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.copied {
+    position: absolute;
+    display: inline-block;
+    -webkit-transform: translate(-10px, -50px);
+    -ms-transform: translate(-10px, -50px);
+    transform: translate(-10px, -50px);
+    background: #000000a3;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 0.3rem;
+    top: -100px;
+    left: -100px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: 0.3s ease opacity;
+    -o-transition: 0.3s ease opacity;
+    transition: 0.3s ease opacity;
+}
+
+.copied.visible {
+    opacity: 1;
+}
+
+.copied:after {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #000000a3;
+    display: inline-block;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 6px);
+    -ms-transform: translate(-50%, 6px);
+    transform: translate(-50%, 6px);
+    -webkit-clip-path: polygon(100% 0, 0 0, 50% 50%);
+    clip-path: polygon(100% 0, 0 0, 50% 50%);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #000000db;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 300;
+    margin: 0;
+}
+
+@media only screen and (max-width:500px) {
+    .main-area {
+        padding: 2rem 1rem;
+    }
+    .each-palette {
+        padding: 0.7rem;
+    }
+    .each-color code {
+        font-size: 0.8rem;
+    }
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
