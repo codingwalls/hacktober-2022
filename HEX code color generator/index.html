@@ -34,9 +34,21 @@
         box-shadow: 0px 20px 30px rgba(75, 75, 75, 0.2);
         border-radius: 15px;
       }
+      .preloader {
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 100;
+      }
     </style>
   </head>
-  <body>
+  <body onload="loadFunc()">
+    <div class="preloader"><img src="../giphy.gif" alt="" /></div>
+
     <div id="container">
       <input
         type="text"
@@ -61,6 +73,12 @@
       clr.addEventListener("input", function () {
         document.getElementById("container").style.background = clr.value;
       });
+      var preloader = document.querySelector(".preloader");
+      function loadFunc() {
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 1650);
+      }
     </script>
   </body>
 </html>
