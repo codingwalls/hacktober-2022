@@ -1,0 +1,53 @@
+html,body{
+    font-family: sans-serif;
+}
+body{
+    margin: 0px auto;
+    max-width: 1000px;
+}
+h1{
+    margin: 0;
+}
+th{
+    color: rgb(56, 56, 56);
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 60px;
+}
+td{
+    border: 1px solid rgb(190,190,190);
+    padding: 0px 5px;
+}
+thead{
+    background-color: cadetblue;
+    line-height: 20px;
+}
+footer,header{
+    background-color: rgb(186, 41, 243);
+    padding: 0 20px;
+    color: white;
+    line-height: 100px;
+}
+footer{
+    line-height: 60px;
+}
+footer p{
+    text-align: center;
+    font-size: 18px;
+}
+#new-contact, #contact-display {
+    padding: 20px;
+}
+#new-contact {
+    background: #ddd;
+}
+div {
+    margin-bottom: 10px;
+}
+ul {
+  list-style-type: none;
+}
+label {
+display: inline-block;
+width: 90px;
+text-align: right;
+}
