@@ -107,3 +107,15 @@ const btn = document.getElementById('btn').addEventListener('click', (e) => {
     second.value = '';
 });
 
+////////////////////////////////////////////////////////////////////////////////////////
+
+//PRELOADER
+
+      var preloader = document.querySelector(".preloader");
+      function loadFunc() {
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 1650);
+}
+      
+////////////////////////////////////////////////////////////////////////////////////////
