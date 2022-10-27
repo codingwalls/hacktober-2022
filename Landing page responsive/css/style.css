@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --bg-color: #f3ede5;
+    --gray-color: #758593; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+}
+
+
+/*------------------------- Reutilizable--------------------- */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 3px;
+    background: #133416;
+    font-weight: 600;
+}
+
+.gray-text{
+    color: var(--gray-color);
+}
+
+.font-size-gray{
+    font-size: 1.2rem;
+}
+
+.toggle{
+    width: 25px;
+    height: 25px;
+    display: none; 
+    cursor: pointer;
+}
+
+.toggle.active{
+    display: block;
+}
+
+.close{
+    width: 25px;
+    height: 25px;
+    display: none; 
+    cursor: pointer;
+}
+
+.close.active{
+    display: block;
+}
+
+
+/* ------------- Header --------------- */
+
+header{
+    z-index: 10;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.login-btns a{
+    margin: 10px;
+}
+
+.uil{
+    color: #88aed0;
+}
+
+/* ------------ Header Submenu ------------- */
+.submenu-position{
+    position: relative;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    z-index: 10;
+    transition: all 0.3s ease-in;
+}
+
+.submenu.active{
+    display: block;
+}
+
+.submenu::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 55px;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: white;
+    z-index: 10;
+}
+
+.service{
+    display: grid;
+    grid-template-columns: 20px auto;
+}
+
+.icono{
+    font-size: 1.2rem;
+}
+
+.text{
+    padding: 0 0 0 10px;
+}
+
+
+/* --------------- Landing Section --------------- */
+.landing{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    /* background: red; */
+}
+
+.text-container{
+    padding: 150px 0 0;
+    width: 100%;
+}
+
+.text-container h1{
+    font-size: 4rem;
+}
+
+.text-container h1 span{
+    color: #f7b300;
+}
+
+.text-container p{
+    margin: 10px 0 40px;
+}
+
+.rating{
+    margin: 50px 0 0;
+    width: 100%;
+    display: flex;
+}
+
+.rating h3{
+    font-weight: 300;
+    margin: 0;
+}
+
+.rating img{
+    width: 25px;
+    margin-left: 10px;
+}
+
+.image-container img{
+    padding: 120px 0 0;
+    width: 300px;
+}
+
+/* -------------- Section de los logos --------------- */
+
+.logo-section{
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.logos-container{
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.logos-container img{
+    width: 80%;
+    height: 50px;
+}
+
+
+@media screen and (min-width: 991px) and (max-width: 1200px){
+    
+    /* --------------- Landing Section --------------- */
+    .landing{
+        gap: 2rem;
+        z-index: 1;
+    }
+    
+    .text-container{
+        padding: 40px 50px 0;
+    }
+
+    .text-container h1{
+        font-size: 3rem;
+    }
+
+    .rating img{
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .image-container img{
+        padding: 40px 50px 0;
+        width: 300px;
+    }
+
+    /* -------------- Section de los logos --------------- */
+
+    .logos-container{
+        width: 700px;
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 990px){
+    
+    /* ---------- Submenu ----------- */
+    
+    .service{
+        display: grid;
+        grid-template-columns: 20px auto;
+    }
+    
+    .icono{
+        font-size: 1.2rem;
+    }
+    
+    .text{
+        padding: 0 0 0 10px;
+    }
+    
+
+
+
+    /* ----------------- Header y menu responsive --------------- */
+    .toggle{
+        display: block;
+        z-index: 10;
+        position: fixed;
+        right: 70px;
+        top: 50px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .login-btns{
+        display: none;
+    }
+
+    
+    /* --------------- Landing Section --------------- */
+    .landing{
+        gap: 1rem;
+    }
+    
+    .text-container{
+        padding: 60px 30px 0;
+    }
+
+    .text-container h1{
+        font-size: 3rem;
+    }
+
+    .rating img{
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .image-container img{
+        padding: 60px 30px 0;
+        width: 300px;
+    }
+
+    /* -------------- Section de los logos --------------- */
+
+    .logos-container{
+        width: 600px;
+    }
+    
+    
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width: 767px){
+    
+    .font-size-gray{
+        font-size: 1rem;
+    }
+
+    /* ----------------- Header y menu responsive --------------- */
+    .toggle{
+        display: block;
+        z-index: 10;
+        right: 70px;
+        top: 50px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .login-btns{
+        display: none;
+    }
+
+    
+    /* --------------- Landing Section --------------- */
+    .landing{
+        gap: 1rem;
+    }
+    
+    .text-container{
+        padding: 30px 20px 0;
+    }
+
+    .text-container h1{
+        font-size: 3rem;
+    }
+
+    .rating img{
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .image-container img{
+        display: none;
+    }
+
+    /* -------------- Section de los logos --------------- */
+    .logo-section{
+        padding: 30px 20px;
+    }
+
+    .logos-container{
+        margin: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+    }
+    
+    .logos-container img{
+        width: 80%;
+        height: 50px;
+    }
+    
+}
